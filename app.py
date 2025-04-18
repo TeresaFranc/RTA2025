@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/v1.0/predict', methods=['GET', 'POST'])
+@app.route('/api/v1.0/predict', methods=['GET'])
 def predict():
     try:
         num1 = float(request.args.get('num1', 0))
