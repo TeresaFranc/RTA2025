@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/test')
+def test():
+    return "API działa!"
+
 @app.route('/api/v1.0/predict', methods=['GET'])
 def predict():
     try:
